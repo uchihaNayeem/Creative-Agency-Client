@@ -14,12 +14,12 @@ const SideMenu = () => {
             </div>
             
             <div>
-                <Link to="/serviceAdd">
+                <Link to="/addService">
                     <FontAwesomeIcon icon={faPlus} /> <span>Add Service</span>
                 </Link>
             </div>
             <div>
-                <Link to="/addAdmin">
+                <Link to="/makeAdmin">
                     <FontAwesomeIcon icon={faUser} /> <span>Make Admin</span>
                 </Link>
             </div>

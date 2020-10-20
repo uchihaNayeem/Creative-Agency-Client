@@ -10,15 +10,9 @@ const ServiceList = () => {
           <img style={{ height: '60px', textAlign: 'center', marginLeft: '10%'}} src={logo} alt=""/>
           <SideMenu></SideMenu>
         </div>
-
-        
-         
-            <div className="d-flex justify-content-center">
-              <h1>servicelists</h1>
-
-            </div>
-          
-        
+        <div className="d-flex justify-content-center">
+          <h1>Service Lists</h1>
+        </div>
     </div>
 </section>
 

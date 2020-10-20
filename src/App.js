@@ -5,7 +5,9 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import AddService from './components/Dashboard/AddService/AddService';
 import Dashboard from './components/Dashboard/Dashboard';
+import MakeAdmin from './components/Dashboard/MakeAdmin/MakeAdmin';
 import ServiceList from './components/Dashboard/ServiceList/ServiceList';
 import Home from './components/Home/Home/Home';
 import Login from './components/Login/Login';
@@ -32,6 +34,12 @@ function App() {
         </Route>
         <Route path="/serviceList">
           <ServiceList></ServiceList>
+        </Route>
+        <Route path="/addService">
+          <AddService></AddService>
+        </Route>
+        <Route path="/makeAdmin">
+          <MakeAdmin></MakeAdmin>
         </Route>
         <PrivateRoute path="/dashboard">
           <Dashboard></Dashboard>
