@@ -36,10 +36,9 @@ const threeItem = {
 const Carousal = () => {
   return (
     <section className='carousel'>
-       
       <div className="justify-content-center ">
           <h1 className="text-white text-center">Here are some of<span className="carousel-header"> our works</span></h1>
-          <AliceCarousel autoPlay infinite items={items} responsive={threeItem}/>
+          <AliceCarousel  infinite items={items} responsive={threeItem}/>
       </div>
     </section>
   );

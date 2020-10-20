@@ -3,7 +3,7 @@ import Services from '../Services/Services';
 import icon1 from '../../../images/icons/service1.png'
 import icon2 from '../../../images/icons/service2.png'
 import icon3 from '../../../images/icons/service3.png'
-import { Link } from 'react-router-dom';
+
 
 const Service = () => {
 

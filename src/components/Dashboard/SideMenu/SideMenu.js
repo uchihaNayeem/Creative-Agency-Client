@@ -12,7 +12,6 @@ const SideMenu = () => {
                     <FontAwesomeIcon icon={faFile} /> <span>Service list</span>
                 </Link>
             </div>
-            
             <div>
                 <Link to="/addService">
                     <FontAwesomeIcon icon={faPlus} /> <span>Add Service</span>
@@ -23,8 +22,7 @@ const SideMenu = () => {
                     <FontAwesomeIcon icon={faUser} /> <span>Make Admin</span>
                 </Link>
             </div>
-
-        </div>
+    </div>
 
         
   );

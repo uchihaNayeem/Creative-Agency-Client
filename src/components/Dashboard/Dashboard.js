@@ -13,10 +13,6 @@ const Dashboard = () => {
                 <SideMenu></SideMenu>
                     
                 </div>
-                <div className="col-md-10 p-4 pr-5 d-flex justify-content-center">
-                    
-                    
-               </div> 
             </div>    
         </section>
     </div>

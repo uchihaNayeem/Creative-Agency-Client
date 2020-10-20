@@ -3,7 +3,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 import AddService from './components/Dashboard/AddService/AddService';
 import Dashboard from './components/Dashboard/Dashboard';
@@ -12,6 +11,7 @@ import ServiceList from './components/Dashboard/ServiceList/ServiceList';
 import Home from './components/Home/Home/Home';
 import Login from './components/Login/Login';
 import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
+import NotFound from './components/NotFound/NotFound';
 
 export const UserContext = createContext();
 
@@ -44,6 +44,9 @@ function App() {
         <PrivateRoute path="/dashboard">
           <Dashboard></Dashboard>
         </PrivateRoute>
+        <Route path="*">
+          <NotFound></NotFound>
+        </Route>
       </Switch>
     </Router>
 

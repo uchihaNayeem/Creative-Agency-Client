@@ -6,6 +6,7 @@ import "firebase/auth";
 import { UserContext } from '../../App';
 import './Login.css'
 import logo from '../../../src/images/logos/logo.png'
+import googleLogo from '../../../src/images/logos/google-logo.png'
 
 
 const Login = () => {
@@ -52,20 +53,17 @@ const Login = () => {
 
   return (
     <div className="login">
-            <img className="img-fluid mt-5 pt-5" width="200px" src={logo} />
-            <div className="login-box mt-5 p-5">
-                <h3>Login With</h3><br />
-                <button className="login-btn text-left" onClick={handleLogin}>
-                    <img width="30px" src="https://img.icons8.com/color/48/000000/google-logo.png" />
-                    <b className="pr-5">Continue with Google</b>
-                </button>
-
-                <p>Don't have an account? Create One</p>
-
-                <p style={{ color: 'red' }}>{error.errorCode} {error.errorMessage}</p>
-            </div>
-
-        </div>
+      <img className="img-fluid mt-5 pt-5" width="200px" src={logo} />
+      <div className="login-box mt-5 p-5">
+          <h3>Login With</h3><br />
+          <button className="login-btn text-left" onClick={handleLogin}>
+          <img width="30px" src={googleLogo}/>
+          <b className="pr-5">Continue with Google</b>
+          </button>
+          <p>Don't have an account? Create One</p>
+          <p style={{ color: 'red' }}>{error.errorCode} {error.errorMessage}</p>
+      </div>
+    </div>
   );
 };
 
