@@ -3,6 +3,7 @@ import Services from '../Services/Services';
 import icon1 from '../../../images/icons/service1.png'
 import icon2 from '../../../images/icons/service2.png'
 import icon3 from '../../../images/icons/service3.png'
+import { Link } from 'react-router-dom';
 
 const Service = () => {
 
@@ -26,6 +27,7 @@ const Service = () => {
 
   return (
     <div>
+       
       <h1 className="text-center">Provide Awesome <span style={{color: '#17bc78'}}>Services</span> </h1>
 
       <div className="custom-container mt-5 pt-5">
@@ -35,6 +37,7 @@ const Service = () => {
                 }
             </div>
         </div>
+        
       
     </div>
 

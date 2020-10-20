@@ -5,6 +5,7 @@ import firebaseConfig from './firebase.config';
 import "firebase/auth";
 import { UserContext } from '../../App';
 import './Login.css'
+import logo from '../../../src/images/logos/logo.png'
 
 
 const Login = () => {
@@ -27,11 +28,10 @@ const Login = () => {
   const handleLogin = () => {
       firebase.auth().signInWithPopup(googleProvider)
           .then(result => {
-              const user = result.user;
-              localStorage.setItem("name", JSON.stringify(user.displayName));
-              localStorage.setItem("email", JSON.stringify(user.email));
-              history.replace(from);
-              history.go(0);
+            const {displayName, email, photoURL} = result.user;
+            const signedInUser = {name: displayName, email, img: photoURL}
+            setLoggedInUser(signedInUser);
+            storeAuthToken();
           }).catch(error => {
               const errorCode = error.code;
               const errorMessage = error.message;
@@ -39,10 +39,20 @@ const Login = () => {
           });
   }
 
+  const storeAuthToken = () => {
+    firebase.auth().currentUser.getIdToken(true)
+      .then(function (idToken) {
+        sessionStorage.setItem('token', idToken);
+        history.replace(from);
+      }).catch(function (error) {
+        // Handle error
+      });
+  }
+
 
   return (
     <div className="login">
-            <img className="img-fluid mt-5 pt-5" width="200px" src="https://i.ibb.co/cgrXbTz/logo.png" />
+            <img className="img-fluid mt-5 pt-5" width="200px" src={logo} />
             <div className="login-box mt-5 p-5">
                 <h3>Login With</h3><br />
                 <button className="login-btn text-left" onClick={handleLogin}>

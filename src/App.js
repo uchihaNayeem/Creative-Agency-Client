@@ -6,6 +6,7 @@ import {
   Link
 } from "react-router-dom";
 import Dashboard from './components/Dashboard/Dashboard';
+import ServiceList from './components/Dashboard/ServiceList/ServiceList';
 import Home from './components/Home/Home/Home';
 import Login from './components/Login/Login';
 import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
@@ -28,6 +29,9 @@ function App() {
         </Route>
         <Route path="/login">
           <Login/>
+        </Route>
+        <Route path="/serviceList">
+          <ServiceList></ServiceList>
         </Route>
         <PrivateRoute path="/dashboard">
           <Dashboard></Dashboard>
